@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+</head>
+<body>
+    <h1>Sistema de Identificação</h1>
+    De qual nacionalidade você é:<input type="text" name="txtid" id="txtid">
+    <input type="button" value="Identificar" onclick="calcular();">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var txtid = document.getElementById("txtid")
+            var res = document.createElement("res")
+            var idf = (txtid.value)
+            res.innerHTML = `<p>Você é de <strong>${idf}</strong></p>`
+            if (idf == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>BRASILEIRO</strong> pode passar</p>`
+            }
+            else {
+                res.innerHTML += `<p>Você é <strong>ESTRANGEIRO</strong> não pode passar</p>`
+            }
+            res.innerHTML += `<p>Tenha um Bom Dia</p>`
+        }
+    </script>
+</body>
+</html>
