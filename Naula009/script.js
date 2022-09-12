@@ -1,5 +1,5 @@
 function clicar() {
-    let profession = document.getElementById('profession');
+    let profession = document.getElementById('resposta');
     switch (profession) {
         case 'policial':
             document.getElementById('background').style.backgroundColor = blueColor;
