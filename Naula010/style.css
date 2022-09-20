@@ -1,7 +1,7 @@
 .txt {
     border: 2px solid black;
     width: 300px;
-    height: 9000px;
+    height: 1000px;
     overflow: auto;
     background-color: white;
 }
