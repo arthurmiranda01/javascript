@@ -1,3 +1,4 @@
 
 let nome = 'Arthur de Carvalho'
-console.log(nome.indexOf('Carvalho'));
+let resultado = nome.replace('Arthur', 'Luizão')
+console.log(`Meu nome é ${resultado}`)
