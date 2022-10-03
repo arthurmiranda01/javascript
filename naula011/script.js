@@ -1,4 +1,9 @@
+function showTime() {
+    let hora = new Date();
+    let h = hora.getHours();
+    let m = hora.getMinutes();
+    let s = hora.getSeconds();
+    let txt = h+':'+m+':'+s;
 
-let nome = 'Arthur de Carvalho'
-let resultado = nome.replace('Arthur', 'Luizão')
-console.log(`Meu nome é ${resultado}`)
+    document.querySelector('.demo').innerHTML = txt;
+}
