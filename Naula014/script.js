@@ -1,12 +1,13 @@
 function loadPost() {
+    document.getElementById('posts').innerHTML = 'Loading...';
     let req = fetch('https://jsonplaceholder.typicode.com/posts')
         .then(function(resultado) {
-            return resultado.json()
+            return resultado.json();
         })
         .then(function(json){
-            console.log(json);
+            document.getElementById('posts').innerHTML = json.length+' posts';
         })
         .catch(function(error){
-            console.log('Deu error!')
+            console.log('Deu error!');
         })
 }
