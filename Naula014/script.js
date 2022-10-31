@@ -1,6 +1,13 @@
-function loadPost() {
+async function loadPost() {
     document.getElementById('posts').innerHTML = 'Loading...';
-    let req = fetch('https://jsonplaceholder.typicode.com/posts')
+    
+    //forma mais rápida
+    let reqt = await fetch('https://jsonplaceholder.typicode.com/posts')
+    let json = await reqt.json();
+    montarBlog(json);
+
+    //forma mais demorada
+    /*let req = fetch('https://jsonplaceholder.typicode.com/posts')
         .then(function(resultado) {
             return resultado.json();
         })
@@ -9,7 +16,7 @@ function loadPost() {
         })
         .catch(function(error){
             console.log('Deu error!');
-        })
+        })*/
 }
 
 function montarBlog(lista) {
